@@ -1,0 +1,45 @@
+\documentclass[16pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{titling}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+
+%% Configuration des pages de contenu
+\lhead{SAFExTY}
+\rfoot{Page \thepage}
+\lfoot{Projet SAFExTY - S2 EPITA 2020}
+
+%% Pré-titre
+\pretitle{
+  \begin{center}
+  \includegraphics[width=5cm]{images/logo.png}\\
+}
+
+%% Titre
+\title{\Huge Cahier des charges}
+\author{SAFExTY}
+\date{Janvier 2020}
+
+\posttitle{\end{center}}
+
+\begin{document}
+
+%% Page de titre
+\maketitle
+\pagebreak
+
+%% Page table des matières
+\tableofcontents
+
+%% Les autres pages
+\include{sections/presentation/presentation}
+\include{sections/project/project}
+
+\end{document}
