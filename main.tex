@@ -1,4 +1,4 @@
-\documentclass[16pt]{article}
+\documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -7,24 +7,33 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{titling}
+\usepackage{sectsty} %% taille des textes
+\usepackage{tocloft} %% taille table des matières
  
 \pagestyle{fancy}
 \fancyhf{}
 
-%% Configuration des pages de contenu
+%% Tête et pied de page
 \lhead{SAFExTY}
 \rfoot{Page \thepage}
-\lfoot{\includegraphics[width=2cm]{images/logo.png}}
+\lfoot{Janvier 2020}
+
+%% Configuration des sections
+\sectionfont{\LARGE}
+\subsectionfont{\Large}
+\renewcommand\cftsecfont{\Large\bf}
+\renewcommand\cftsubsecfont{\large}
+\renewcommand\cftsecafterpnum{\par\addvspace{10pt}}
+
 
 %% Pré-titre
 \pretitle{
   \begin{center}
-  \includegraphics[width=5cm]{images/logo.png}\\
+  \includegraphics[width=7cm]{images/SAFExTY-Text.png}\\
 }
 
 %% Titre
 \title{\Huge Cahier des charges}
-\author{SAFExTY}
 \date{Janvier 2020}
 
 \posttitle{\end{center}}
@@ -36,7 +45,13 @@
 \pagebreak
 
 %% Page table des matières
-\tableofcontents
+\begingroup
+  \flushbottom
+  \setlength{\parskip}{0pt plus 1fil}%
+  \renewcommand{\contentsname}{\huge\textsc{Table des matières\newline}}
+  \tableofcontents
+  \newpage
+\endgroup
 
 %% Les autres pages
 \include{sections/1-introduction/introduction}

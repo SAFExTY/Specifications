@@ -2,17 +2,49 @@
 
 \subsection{Introduction du projet}
 \subsubsection{Origine du projet}
-\subsubsection{Nature du projet}
+Nous nous sommes réunis dans ce groupe car nous voulons créer un programme permettant de rendre service aux autres. Notre objectif est de créer un logiciel utile, utilisé par plusieurs personnes qui en ont le besoin. Nous souhaitons faire un quelque-chose qui sert.
 
-D'où vient l'idée de ce projet, de quelle nature ?
+\subsubsection{Nature du projet}
+Comme évoqué lors de la présentation de l'équipe, Valentin Chassignol fait partie des sapeurs-pompiers volontaires (SPV) dans la caserne de Saint-Georges-D'espéranche, en Isère. Ayant pu voir, comprendre et expérimenter le fonctionnement de la caserne des logiciels et du SDIS, il a relevé, avec l'aide de collègues, des problèmes faisant du système logistique mise en place par le département un système âgé et ne correspondant pas aux besoins opérationnels qui ont évolués. De plus, il a noté que certaines tâches pouvaient être automatisées et informatisées afin de gagner du temps précieux et évitant ainsi la non-disponibilité des agents et des véhicules. Il a ainsi proposé la création d'un logiciel permettant de simplifier certaines des tâches incombant à la caserne et permettant un meilleur suivi des agents par le chef de centre. Également, la formation de pompiers (et jeunes sapeurs-pompiers) est au cœur du métier, c'est pourquoi, en vue du peu d'information proposées, proposer une plateforme d'apprentissage, de préparations ou de révisions pour les formations semble particulièrement intéressante.
+
 
 \subsection{Objet de l'étude}
 
 \subsubsection{Les attentes et objectifs}
-Intérêt du projet, ce que ça peut nous apporter...
+Un tel projet demande de solides connaissance sur la gestion de bases de données. Il nous faut pour cela apprendre à la créer, à la modifier et ce, de manière sécurisée. De plus, travailler en groupe va nous demander de savoir délégué le travail afin de se concentrer sur une seule partie et d'avoir confiance en nos coéquipiers. Chaque partie devant à terme pouvoir être fonctionnelle et accessible pour tous ! L'organisation du code, les noms des classes, des fonctions doivent être clairs et suffisamment documentés. Le code doit être également lisible, clair et compris de tous afin que le groupe puisse aisément le modifier et l'adapter en fonction des besoins de chacun et des éventuels problèmes qui pourraient survenir de façon inopinée.
 
 \subsubsection{Définition du projet}
-Defénition du projet et de toutes les parties
+Notre objectif avec ce projet est de simplifier grandement la logistique de toute une caserne ! Aussi bien sur le plan de la gestion du matériel, des véhicules, du personnels que des ressources et formations des agents et jeunes sapeurs-pompiers. \\
 
-\subsection{Etat de l'art}
-But et intérêts des logiciels dans ce genre, logiciels existants (au moins 3), points forts, faibles....
+D'abord, le programme doit répertorier l'ensemble des agents de la caserne. Le logiciel doit permettre à chaque agent d'avoir une fiche de renseignement accessible uniquement en interne. Ceux-ci étant caractérisés obligatoirement par : 
+\begin{itemize}
+  \item \textbf{leurs noms et prénoms}
+  \item \textbf{leurs grades}
+  \item \textbf{leurs matricules}\\
+\end{itemize}
+
+Également, afin de simplifier les démarches administrative, cette section doit permettre de connaître :
+\begin{itemize}
+  \item \textbf{le nombre et le temps passer en intervention de chaque agent}
+  \item \textbf{la date de la dernière et un historique des visites médicales} : afin d'effectuer des rappels d'échéance, des suivis et une meilleure gestion de la disponibilité de la caserne.
+  \item \textbf{la date et l’expiration du permis poids-lourd} : dans le même objectif
+  \item \textbf{la liste des formations effectuées avec leurs dates d'obtention} :
+  \item \textbf{les formations accessibles} : afin de proposer des futures formations possibles par un agent en fonction de son grade, de son ancienneté et des besoins internes
+  \item \textbf{les équipements de l'agent} : afin faciliter, en autre, les démarches de changements et prêts des équipements de protections personnelles
+\end{itemize}
+Un système d'annonce et de gestion des événements organisés par l'amicale des sapeurs-pompiers serait un plus mais pas une nécessité. \\
+
+
+Une deuxième partie doit répertorier le matériel et les véhicules que possède la caserne : elle doit indiquer les dates de vérifications obligatoire que chacun des matériels doit passer et indiquer si le matériel est disponible ou à changer. Un affichage de la consommation, de prévision d'achat doit être pensé. Aussi, il doit permettre de faire et de gérer l'inventaire de chaque véhicule facilement. Chaque semaine (voir chaque jour), tous les véhicules subissent une vérification du matériel afin de pouvoir partir en intervention dans la journée. Le logiciel doit pouvoir permettre de suivis complet de chacun des véhicules avec des rappels pour les contrôles techniques (tous les deux ans) et le signalement de pannes ou de problèmes empêchant sont bon fonctionnement.\\ 
+
+La troisième partie concerne le groupement et la formation des pompiers. Il doit proposer une plateforme permettant de former et d'aider à la formation des pompiers et jeunes sapeurs-pompiers en proposant des vidéos et tutoriels écrits déjà disponible, certifiés par des formateurs de premiers-secours ou du départements. Il doit pouvoir également proposer des préparations aux formations et des maintiens des acquis avec des QCM, des évaluations indicatives etc.\\
+
+Enfin ce logiciel doit être utilisable par toutes casernes. Il doit donc être possible de générer une nouvelle caserne, avec toutes les informations nécessaires simplement. Le programme gérant des données sensibles, privées comme des fiches de renseignement, il est obligatoire de les protéger. Ainsi un cryptage des données doit être mis en place afin d'assurer que rien ni personne (autre que les autorisés) puissent y accéder ou y modifier.
+
+\subsection{État de l'art}
+Parmi les logiciels conçus afin d'aider les Sapeurs-Pompiers (SP), on peut citer l'application Artemis\footnotemark[1] conçu par InfleXsys. Ce logiciel permet notamment aux SPVs de gérer facilement leurs disponibilités. De plus l'interface a été pensée afin d'être très simple d'utilisation permettant ainsi d'être accessible par tous, que l'on soit habitué ou non aux smartphones. Cependant le logiciel ne couvre que peu d'options et ne s'intéresse qu'aux pompiers des départements utilisant leur système ne gère que leurs disponibilités. Notre projet vise à aider toute caserne souhaitant utilisé notre système en couvrant un maximum de parties.
+
+Il n'existe à ce jour aucun logiciel à jour et adapté aux besoins des pompiers. Ce ne sont que des logiciels bien séparés, faisant chacun une seule tâche sans communiquer avec les autres.
+
+\footnotetext[1]{Document explicatf de l'application :
+\url{https://www.inflexsys.com/wp-content/uploads/2017/04/InfleXsys-Temoignage-SIS.pdf}} 
