@@ -1,50 +1,63 @@
-\section{Le projet}
+\section{Le cœur projet}
 
 \subsection{Introduction du projet}
 \subsubsection{Origine du projet}
-Nous nous sommes réunis dans ce groupe car nous voulons créer un programme permettant de rendre service aux autres. Notre objectif est de créer un logiciel utile, utilisé par plusieurs personnes qui en ont le besoin. Nous souhaitons faire un quelque-chose qui sert.
+Nous nous sommes réunis dans ce groupe car nous voulions créer un logiciel pouvant aider une caserne de pompiers. Cependant devant l'impossibilité de réaliser ce projet nous sommes resté sur l'idée des secours : nous sommes par la suite partie sur un jeu vidéo de gestion des services de secours d'une ville afin de ne pas être totalement dé-paysagés.
 
 \subsubsection{Nature du projet}
-Comme évoqué lors de la présentation de l'équipe, Valentin Chassignol fait partie des sapeurs-pompiers volontaires (SPV) dans la caserne de Saint-Georges-D'espéranche, en Isère. Ayant pu voir, comprendre et expérimenter le fonctionnement de la caserne des logiciels et du SDIS, il a relevé, avec l'aide de collègues, des problèmes faisant du système logistique mise en place par le département un système âgé et ne correspondant pas aux besoins opérationnels qui ont évolués. De plus, il a noté que certaines tâches pouvaient être automatisées et informatisées afin de gagner du temps précieux et évitant ainsi la non-disponibilité des agents et des véhicules. Il a ainsi proposé la création d'un logiciel permettant de simplifier certaines des tâches incombant à la caserne et permettant un meilleur suivi des agents par le chef de centre. Également, la formation de pompiers (et jeunes sapeurs-pompiers) est au cœur du métier, c'est pourquoi, en vue du peu d'information proposées, proposer une plateforme d'apprentissage, de préparations ou de révisions pour les formations semble particulièrement intéressante.
-
+Nous allons travailler à la création d'un jeu vidéo qui puisse être jouée par le plus grand nombre. Sa visée principale est d'apprendre à gérer la construction d'une ville et principalement de son service de secours. Le joueur devra faire évoluer sa ville en améliorant les bâtiments et le pôle de secours. Afin de permettre ces améliorations, le joueur devra gagner des points en réalisant des interventions sur différents incidents présents dans la ville, tel qu'un accident de voiture, un incendie....
 
 \subsection{Objet de l'étude}
 
 \subsubsection{Les attentes et objectifs}
-Un tel projet demande de solides connaissance sur la gestion de bases de données. Il nous faut pour cela apprendre à la créer, à la modifier et ce, de manière sécurisée. De plus, travailler en groupe va nous demander de savoir délégué le travail afin de se concentrer sur une seule partie et d'avoir confiance en nos coéquipiers. Chaque partie devant à terme pouvoir être fonctionnelle et accessible pour tous ! L'organisation du code, les noms des classes, des fonctions doivent être clairs et suffisamment documentés. Le code doit être également lisible, clair et compris de tous afin que le groupe puisse aisément le modifier et l'adapter en fonction des besoins de chacun et des éventuels problèmes qui pourraient survenir de façon inopinée.
+La création d'un jeu vidéo demande des connaissances dans divers domaines. De plus, travailler en groupe va nous demander d'organiser et de savoir déléguer le travail afin de se concentrer sur une seule partie et d'avoir confiance en nos coéquipiers. Chaque partie devant à terme pouvoir être fonctionnelle et accessible pour tous ! L'organisation du code, les noms des classes, des fonctions doivent être claires et suffisamment documentés. Le code doit être également lisible, clair et compris de tous afin que le groupe puisse aisément le modifier et l'adapter en fonction des besoins de chacun et des éventuels problèmes qui pourraient survenir de façon inopinée.
 
 \subsubsection{Définition du projet}
-Notre objectif avec ce projet est de simplifier grandement la logistique de toute une caserne ! Aussi bien sur le plan de la gestion du matériel, des véhicules, du personnels que des ressources et formations des agents et jeunes sapeurs-pompiers. \\
+ Nous souhaitons donc réaliser un jeu sur la gestion d'une ville, et de son service de secours. Il se découperait en plusieurs parties:\\
+    \begin{itemize}
+        \item \textbf{Gestion de la map} :\\
+        Dans cette partie il faudra définir la map sur laquelle reposera le jeu, c'est-à-dire là où les bâtiments peuvent être construits ainsi que la place nécessaire sur les cases de jeu qu'ils représentent. La Map sera en vue 2D isométrique, c'est un bon moyen de simuler de la 3D sans ses contraintes (voir annexes). La carte sera composée de différents reliefs : plaines, montagnes, rivières. Seront également présents des éléments naturels tels que des arbres, des buissons, des rochers, des fleurs. Ces objets pourront être détruits afin de libérer de l'espace constructible. Il faut alors pouvoir positionner les bâtiments, les construire, les déplacer et les détruire, chaque action prenant un certain temps.\\
+        
+        \item \textbf{Gestion des bâtiments} :\\
+        Ici, il faudra créer les bâtiments et les définir. Il faudra donc exprimer les caractéristiques de chaque bâtiment dont on peut déjà lister une partie :
+        \begin{itemize}
+            \item la taille qu'il prend sur la map (zone nécessaire à sa construction)
+            \item le coût en ressource (temps et argent) pour sa construction
+            \item le temps de construction
+            \item le coût d'une amélioration
+            \item le temps d'une amélioration
+            \item ce que rapporte le bâtiment (en fonction du niveau)
+            \item ce qu'il débloque (en action, bâtiment...)
+        \end{itemize}
+        Le tout avec différentes textures bien évidemment.\\
 
-D'abord, le programme doit répertorier l'ensemble des agents de la caserne. Le logiciel doit permettre à chaque agent d'avoir une fiche de renseignement accessible uniquement en interne. Ceux-ci étant caractérisés obligatoirement par : 
-\begin{itemize}
-  \item \textbf{leurs noms et prénoms}
-  \item \textbf{leurs grades}
-  \item \textbf{leurs matricules}\\
-\end{itemize}
-
-Également, afin de simplifier les démarches administrative, cette section doit permettre de connaître :
-\begin{itemize}
-  \item \textbf{le nombre et le temps passer en intervention de chaque agent}
-  \item \textbf{la date de la dernière et un historique des visites médicales} : afin d'effectuer des rappels d'échéance, des suivis et une meilleure gestion de la disponibilité de la caserne.
-  \item \textbf{la date et l’expiration du permis poids-lourd} : dans le même objectif
-  \item \textbf{la liste des formations effectuées avec leurs dates d'obtention} :
-  \item \textbf{les formations accessibles} : afin de proposer des futures formations possibles par un agent en fonction de son grade, de son ancienneté et des besoins internes
-  \item \textbf{les équipements de l'agent} : afin faciliter, en autre, les démarches de changements et prêts des équipements de protections personnelles
-\end{itemize}
-Un système d'annonce et de gestion des événements organisés par l'amicale des sapeurs-pompiers serait un plus mais pas une nécessité. \\
-
-
-Une deuxième partie doit répertorier le matériel et les véhicules que possède la caserne : elle doit indiquer les dates de vérifications obligatoire que chacun des matériels doit passer et indiquer si le matériel est disponible ou à changer. Un affichage de la consommation, de prévision d'achat doit être pensé. Aussi, il doit permettre de faire et de gérer l'inventaire de chaque véhicule facilement. Chaque semaine (voir chaque jour), tous les véhicules subissent une vérification du matériel afin de pouvoir partir en intervention dans la journée. Le logiciel doit pouvoir permettre de suivis complet de chacun des véhicules avec des rappels pour les contrôles techniques (tous les deux ans) et le signalement de pannes ou de problèmes empêchant sont bon fonctionnement.\\ 
-
-La troisième partie concerne le groupement et la formation des pompiers. Il doit proposer une plateforme permettant de former et d'aider à la formation des pompiers et jeunes sapeurs-pompiers en proposant des vidéos et tutoriels écrits déjà disponible, certifiés par des formateurs de premiers-secours ou du départements. Il doit pouvoir également proposer des préparations aux formations et des maintiens des acquis avec des QCM, des évaluations indicatives etc.\\
-
-Enfin ce logiciel doit être utilisable par toutes casernes. Il doit donc être possible de générer une nouvelle caserne, avec toutes les informations nécessaires simplement. Le programme gérant des données sensibles, privées comme des fiches de renseignement, il est obligatoire de les protéger. Ainsi un cryptage des données doit être mis en place afin d'assurer que rien ni personne (autre que les autorisés) puissent y accéder ou y modifier.
+        \item \textbf{Gestion des incidents} :\\
+        Cette partie correspond à gérer les différents incidents qui seront présents dans le jeu en fonction du nombre d'habitants, du niveau de développement de la ville, du niveau du pôle de secours... Les incidents pourront aller de la simple petite blessure/coupure à un gros accident de voiture ou incendie sur lesquels les secours pourront/devront se rendre, dépendamment des ressources disponibles (voitures, camions, support aérien.), plus ou moins rapidement.
+        \\
+    
+        \item \textbf{Stockage Réseau, Sauvegarde \& Launcher}:\\
+        Le joueur a une progression liée à son compte. Il doit alors depuis le site web (ou le jeu) pouvoir se créer un compte qui permettra de synchroniser sa partie, de connaître ses statistiques pour un éventuel leader board sur le site internet.
+        
+        Le Launcher doit permettre de charger les données du joueur dans le jeu et se charger de synchroniser chaque sauvegarde. Il sera réalisé grâce à Qt Sharp (dérivé de QT accessible sur la plateforme .NET).
+         \\
+    \end{itemize}
 
 \subsection{État de l'art}
-Parmi les logiciels conçus afin d'aider les Sapeurs-Pompiers (SP), on peut citer l'application Artemis\footnotemark[1] conçu par InfleXsys. Ce logiciel permet notamment aux SPVs de gérer facilement leurs disponibilités. De plus l'interface a été pensée afin d'être très simple d'utilisation permettant ainsi d'être accessible par tous, que l'on soit habitué ou non aux smartphones. Cependant le logiciel ne couvre que peu d'options et ne s'intéresse qu'aux pompiers des départements utilisant leur système ne gère que leurs disponibilités. Notre projet vise à aider toute caserne souhaitant utilisé notre système en couvrant un maximum de parties.
 
-Il n'existe à ce jour aucun logiciel à jour et adapté aux besoins des pompiers. Ce ne sont que des logiciels bien séparés, faisant chacun une seule tâche sans communiquer avec les autres.
+La plupart des jeux du type city-builder (contruction et gestion d'une ville) pourraient ressembler à notre jeu.\\ 
 
-\footnotetext[1]{Document explicatf de l'application :
-\url{https://www.inflexsys.com/wp-content/uploads/2017/04/InfleXsys-Temoignage-SIS.pdf}} 
+Les jeux \textit{city ville\footnotemark[1]}, \textit{sim city\footnotemark[2]} se rapportent à l'univers de notre jeu puisqu'il faut construire et gérer une ville. Cependant ces jeux restent uniquement axés sur la gestion de la ville, là où notre jeu s'axe sur la ville mais également sur les services de secours. Il y a donc une double gestion.\\
+
+Ce principe de double gestion se retrouve dans d'autres jeux : On peut citer le jeu \textit{township\footnotemark[3]} qui pourrait ressembler au but de notre jeu. Le jeu est basé sur la gestion d'une ville en liant la gestion d'une ferme. Dans notre jeu nous lions gestion d'une ville avec gestion des services de secours. Cependant nous allons ajouter plus d'interaction entre la ville et le poste de secours. Dans la ville se produira des accidents, des problèmes que le joueur devra résoudre à l'aide des services de secours.\\
+
+Il y a également le jeu \textit{Airport city\footnotemark[4]} qui est le jeu qui doit se rapporter le plus à notre jeu. Il associe la gestion d'un aéroport et d'une ville. De plus les deux sont liés. Pour avoir plus de passagers il faut plus d'habitant dans la ville, ou pour avoir de l'énergie dans l'aéroport il faut des éoliennes, etc. Il faut donc très bien gérer la ville pour pouvoir permettre à son aéroport de grandir rapidement. Dans notre jeu les servies de secours évolueront en même temps que la ville. Plus le nombre d'habitants sera important et plus le nombre d'accidents augmentera.
+
+
+\footnotetext[1]{Lien vers le descriptif du jeu city ville :
+\url{https://www.jeuxonline.info/jeu/CityVille}} 
+\footnotetext[2]{Lien vers le descriptif du jeu simcity sur le site EA : 
+\url{https://www.microsoft.com/fr-fr/p/township/9nblggh3vrmz}}  
+\footnotetext[3]{Lien vers le descriptif du jeu township sur le microsoft store :
+\url{https://www.microsoft.com/fr-fr/p/township/9nblggh3vrmz}} 
+\footnotetext[4]{Lien information du jeu dans le microsoft store : 
+\url{https://www.microsoft.com/fr-fr/p/airport-city/9wzdncrfjchj}} 
